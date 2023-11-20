@@ -1,38 +1,50 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 177.78vw; /* 16:9 aspect ratio, adjust as needed */
+  background-color: #87ceeb;
+  margin: auto;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Update the path to your actual bird image file */
+.bird {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background: url('bird.png') no-repeat center center;
+  background-size: cover;
+  bottom: 20vw;
+  left: 5vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Update the path to your actual pipe image file */
+.pipe {
+  position: absolute;
+  width: 20vw;
+  background: url('pipe-a.png') no-repeat center center;
+  background-size: cover;
+  bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.game-over {
+  position: absolute;
+  font-size: 8vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  color: white;
+  font-size: 4vw;
 }
